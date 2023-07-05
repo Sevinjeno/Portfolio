@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
+.text-sphere{
+    position: relative;
+    width: 80%;
+    /* height:100vh; */
+    display: flex;
+    /* justify-content: center ;
+    align-items: center; */
+    /* background: black; */
+    padding-left: 10%;
+}
+
+.tagcloud{
+    /* display: inline-block; */
+    top: 0;
+    left: 0;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.0625em;
+    font-size: 1.3em;
+}
+
+.tagcloud--item{
+    color: rgb(31, 241, 241);
+    text-transform: uppercase;
+}
+.tagcloud--item:hover{
+    color: rgb(255, 255, 255);
+    
+}
