@@ -3,7 +3,7 @@ import React from 'react'
 const Intro = () => {
   return (
     <>
-        <div className='head'>
+        <div className='head reveal'>
         <h1>
         <span>W</span>
            <span>e</span>

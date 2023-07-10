@@ -5,68 +5,64 @@ import "./App.css"
 import AnimateLetters from "./AnimateLetters";
 import Home from "./Home";
 import { useRef, useState } from "react";
-import { animate } from "framer-motion";
 import { useEffect } from "react";
 import Profile from './Profile';
 import ContactMe from './ContactMe';
 import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom';
-BrowserRouter
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+// import { Link } from 'react-scroll';
 function App() {
 
 
+  const [showDiv, setShowDiv] = useState(true);
 
-  // function handleProfile (){
-  //   setShowProfile(true)
-  // }
-  // function handleContact (){
-  //           setContact(true)
-  // }
+  useEffect(() => {
+    debugger
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollPosition = window.innerHeight + window.pageYOffset;
+
+      if (scrollPosition >= documentHeight) {
+    debugger
+
+        setShowDiv(false);
+      } else {
+    debugger
+
+        setShowDiv(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  //setting active class
+
+  //rippling effect on button 
   
 
   return (
     <>
 
+          
+      {showDiv && <div className='__ScrollIndicator'>
+              <span></span>
+              <span></span>
+              <span></span>
+      </div>}
+
+
       <div className="maincontainer">
-            <nav >
-                  <ul className='__navElement'>
-                  
-                  <li>
-                        <Link to="/">Home</Link>
-                      </li>
-                      {/* <li>
-                        <Link to="/Profile">Profile</Link>
-                      </li> */}
-                      <li>
-                        <Link to="/Contact">Contact</Link>
-                      </li>
-                  </ul>
-                </nav>
-
-        
-
-
-        <Routes>
-            <Route path='/' exact element={<Home />} />
-            {/* <Route path='/Profile' exact element={<Profile />} /> */}
-            <Route path='/Contact' exact element={<ContactMe />} />
-            <Route path='*' exact element={<Home />} />
-        </Routes>
-
+      
+          <Home />
+          <Profile />
+          <Contact />
         </div>
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
        
     </>
   )

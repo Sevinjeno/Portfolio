@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@react-spring/parallax": "^9.7.3",
     "@react-three/drei": "^9.76.0",
     "@react-three/fiber": "^8.13.3",
     "framer-motion": "^10.12.16",
@@ -21,6 +22,7 @@
     "react-parallax-tilt": "^1.7.147",
     "react-player": "^2.12.0",
     "react-router-dom": "^6.13.0",
+    "react-scroll": "^1.8.9",
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",
     "TagCloud": "^2.3.2",

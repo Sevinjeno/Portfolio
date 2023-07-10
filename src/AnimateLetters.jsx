@@ -9,14 +9,10 @@ const AnimateLetters = () => {
 
   let name="Hi,I'm Sevinjeno";
   name=name.split("");
-  
 
 
   return (
     <>
-    
-      
-   
    {name.map((letter,i)=>(
                     <Textspan key={i}>
                       {letter === " "?"\u00A0":letter}

@@ -37,7 +37,7 @@ const Robo_obj = ({isMobile}) => {
                 />
               <primitive
                 object={lamp.scene}
-                scale={isMobile?1:0.015}
+                scale={isMobile?0.004:0.015}
                 position={isMobile?[0,0,0]:[0,0,0]}  
                 // rotation={[-0.01,-0.2,-0.1]}
                 >
@@ -54,6 +54,7 @@ const Robo = () => {
     const [isMobile,setIsMobile]=useState(false);
 
     useEffect(()=>{
+      debugger
       const mediaQuery=window.matchMedia('(max-width:500px)');
       setIsMobile(mediaQuery.matches);
       console.log(isMobile)
@@ -72,7 +73,7 @@ const Robo = () => {
 
 
     return(
-        <Canvas className='canvas_robo' style={{height:"1000px",width:"600px"}}
+        <Canvas className='canvas_robo' style={{height:"100%",width:"100%",position:"relative"}}
           frameloop='demand'
            shadows
             camera={{position:[15,1,5],fov:25}}  //position zoom in and out of object

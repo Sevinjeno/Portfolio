@@ -3,17 +3,16 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 
 import {styles} from '../styles'
-import {EarthCanvas} from './canvas'
 import {slideIn} from '../utils/motion'
 import SectionWrapper from '../hoc/SectionWrapper';
+import { Element } from 'react-scroll';
+import { FaLinkedin } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
 
 
 const Contact = () => {
   const formref =useRef();
-  const linkedinProfileUrl = 'www.linkedin.com/in/sevinjeno-fernando-4815861b6';
-  // const linkedinProfileUrl = 'www.Google.com';
-
 
   const [form,setForm]=useState({
     name:'',
@@ -55,104 +54,122 @@ const Contact = () => {
 
   }
   return (
-    <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
-      <motion.div
-         variants={slideIn('left',"tween",0.2,1)}
-         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'>
-            <p className={styles.sectionSubText}>
+  <>
+    <p className={styles.sectionSubText} style={{textAlign:"center",marginTop:"2%"}}>
               Get in touch
             </p>
-            <h3 className={styles.sectionHeadText}>
+            <h3 className={styles.sectionHeadText} style={{textAlign:"center"}}>
               Contact.
             </h3>
-            <form
-               ref={formref}
-               onSubmit={handleSubmit}
-               className='mt-12 flex flex-col gap-8'
-               >
-                <label className='flex flex-col'>
-                  <span className='text-white font-medium mb-4'>
-                    Your Name
-                  </span>
-                  <input
-                     type='text'
-                     name='name'
-                     value={form.name}
-                     onChange={handleChange}
-                     placeholder="What's your name?"
-                     className='bg-tertiary py-4 px-6
-                      placeholder:text-secondary
-                      text-white rounded-lg outlined-none
-                      border-none font-medium'
-                      />
-                </label>
-                <label className='flex flex-col'>
-                  <span className='text-white font-medium mb-4'>
-                    Your Email
-                  </span>
-                  <input
-                     type='email'
-                     name='email'
-                     value={form.email}
-                     onChange={handleChange}
-                     placeholder="What's your email?"
-                     className='bg-tertiary py-4 px-6
-                      placeholder:text-secondary
-                      text-white rounded-lg outlined-none
-                      border-none font-medium'
-                      />
-                </label>
-                {/* <label className='flex flex-col'>
-                  <span className='text-white font-medium mb-4'>
-                    Your Email
-                  </span>
-                  <input
-                     type='email'
-                     name='email'
-                     value={form.email}
-                     onChange={handleChange}
-                     placeholder="What's your email?"
-                     className='bg-tertiary py-4 px-6
-                      placeholder:text-secondary
-                      text-white rounded-lg outlined-none
-                      border-none font-medium'
-                      />
-                </label> */}
-                <label className='flex flex-col'>
-                <span className='text-white font-medium mb-4'>
-                  Your Message
-                </span>
-                  <textarea
-                  rows="7"
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder='Message'
-                  className='bg-tertiary py-4 px-6 placeholder:text-secondary
-                  text-white rounded-lg outline-none
-                  border-none font-medium'
-                  />
-                </label>
-                <button
-                  type='submit'
-                  className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl' 
-                   >
-                    {loading ? 'Sending...':'Send'}
-                </button>
-                <div><a href={linkedinProfileUrl}  target="_blank" rel="noopener noreferrer" >Linkedln </a>
-              </div>
-               </form>
-         </motion.div>
 
-         <motion.div
-         variants={slideIn('right',"tween",0.2,1)}
-         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
-             <EarthCanvas />
-           
-         </motion.div>
+            <div className='ContactMainPage'>
 
-    </div>
+                   <div className='contact1 flex-item'>
+
+
+                      <Element id="cont" className=''>
+                          <motion.div
+                            variants={slideIn('left',"tween",0.2,1)}
+                            className='flex-[0.75] bg-black-100 p-8 rounded-2xl'>
+                                {/* <p className={styles.sectionSubText}>
+                                  Get in touch
+                                </p>
+                                <h3 className={styles.sectionHeadText}>
+                                  Contact.
+                                </h3> */}
+                                <form
+                                  ref={formref}
+                                  onSubmit={handleSubmit}
+                                  className='mt-1 flex flex-col gap-5'
+                                  >
+                                    <label className='flex flex-col'>
+                                      <span className='text-white font-medium mb-4'>
+                                        Your Name
+                                      </span>
+                                      <input
+                                        type='text'
+                                        name='name'
+                                        value={form.name}
+                                        onChange={handleChange}
+                                        placeholder="What's your name?"
+                                        className='bg-tertiary py-4 px-6
+                                          placeholder:text-secondary
+                                          text-white rounded-lg outlined-none
+                                          border-none font-medium'
+                                          />
+                                    </label>
+                                    <label className='flex flex-col'>
+                                      <span className='text-white font-medium mb-4'>
+                                        Your Email
+                                      </span>
+                                      <input
+                                        type='email'
+                                        name='email'
+                                        value={form.email}
+                                        onChange={handleChange}
+                                        placeholder="What's your email?"
+                                        className='bg-tertiary py-4 px-6
+                                          placeholder:text-secondary
+                                          text-white rounded-lg outlined-none
+                                          border-none font-medium'
+                                          />
+                                    </label>
+                                    <label className='flex flex-col'>
+                                    <span className='text-white font-medium mb-4'>
+                                      Your Message
+                                    </span>
+                                      <textarea
+                                      rows="7"
+                                      name="message"
+                                      value={form.message}
+                                      onChange={handleChange}
+                                      placeholder='Message'
+                                      className='bg-tertiary py-4 px-6 placeholder:text-secondary
+                                      text-white rounded-lg outline-none
+                                      border-none font-medium'
+                                      />
+                                    </label>
+                                    <button
+                                      type='submit'
+                                      className='bg-tertiary py-3 px-4 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl' 
+                                      >
+                                        {loading ? 'Sending...':'Send'}
+                                    </button>
+                                    <div>
+                                  </div>
+                                  </form>
+                            </motion.div>
+
+                        </Element>
+
+
+                   </div>
+                   {/* <div  className="flex-item" style={{height:"20vh",width:"2px",border:"2px solid white"}}>
+
+                   </div> */}
+
+                   <div className='contact2 flex-item' > 
+                        <h1 style={{fontSize:"30px"}}>You can <span style={{color:"Blue"}}>Connect</span> With me Directly on  </h1>
+                        <p style={{paddingLeft:"25%",paddingTop:"2%"}}>
+                            <span id="gmail"><a href="mailto:7jenodev@gmail.com" target='_blank'><IoIosMail size="50px" style={{display:"inline-block",cursor:"pointer"}}/></a></span>
+                            <span id="linkedin">
+                            <a href="https://www.linkedin.com/in/sevinjenofernando/" target="_blank"><FaLinkedin size="40px" style={{display:"inline-block",marginLeft:"20px",cursor:"pointer"}} /></a>
+                            </span>&nbsp;
+                        </p>
+
+                        <p style={{fontSize:"18px",marginTop:"2%"}}>Or you can also can  <a href="tel:+918999835317"> <span style={{fontSize:"20px",color:"Blue",fontWeight:"700"}}>  Call me</span> or </a>  <a href="https://wa.me/+918999835317" target='_blank'><span style={{fontSize:"20px",color:"Blue",fontWeight:"700"}}>Send a WhatsApp message</span></a> </p>
+
+                       
+                   </div>
+
+
+            </div>
+
+  
+  </>
+
+
   )
 }
 
-export default SectionWrapper(Contact);
+export default Contact;
