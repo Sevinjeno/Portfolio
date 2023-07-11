@@ -131,7 +131,7 @@ const Projects = () => {
         <div className="__projectInfo">
                  <h2>TvGuide | Sundirect Go</h2>
                  <p>I was responsible for developing from Scratch to a perfectly and effecient working Tvguide for Sundirect Go.Implemented a user-friendly interface with smooth navigation, allowing customers to easily browse and Scroll loading has been implemented since it will prevent slowdown. </p>
-                 <p>To view Project <ChevronsRight size={20} style={{display:'inline-block'}}/><a href='https://www.sundirectgo.in/live-tv' target='_blank'>Sunnxt.com</a></p>
+                 <p>To view Project <ChevronsRight size={20} style={{display:'inline-block'}}/><a href='https://www.sundirectgo.in/live-tv' target='_blank'>Sundirect Tvguide</a></p>
                  <p><span>Built With </span>ReactJs CSS3 Javascript</p>
             </div>
             <div className="__project_thumb">

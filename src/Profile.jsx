@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import { About, Experience, Hero, Navbar, Tech } from './components'
 import TextSphere from './components/TextSphere'
-import Intro from './components/Intro'
 import { motion, useAnimation, useInView } from 'framer-motion'   
 import Projects from './components/projects/Projects'
 import { Element } from 'react-scroll'
-import { slideIn } from './utils/motion'
 const Profile = () => {
 
 
@@ -29,7 +27,6 @@ const Profile = () => {
 
       },[inview_head])
 
-
       useEffect(()=>{
             if(inview_body){
                   // maincontrols.start("visible")
@@ -37,20 +34,11 @@ const Profile = () => {
             } else{
                   ref_body.current.classList.remove('activeProfileBody');
             }
-
-
       },[inview_body])
-
-
-
-
 
   return (
           <Element id="prof">
      <motion.div 
-     
-     
-     
      className="relative z-0 bg-primary" > 
             <div  className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
                    <div     
@@ -73,17 +61,10 @@ const Profile = () => {
 
                      </motion.div>
                      </div>
-                        
-
                    </div>
-                   
-       
-
                       {/* <TextSphere /> */}
-                
                         <Tech /> 
                        <Experience />
-
                         <Projects />
                
         </div> 

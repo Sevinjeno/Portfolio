@@ -8,6 +8,7 @@ export default defineConfig({
    
   build: {
     assetsInclude: ['**/*.mov'],
+    "watch":"vite build --watch --mode development"
   },
           
 })

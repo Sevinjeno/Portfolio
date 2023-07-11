@@ -1,34 +1,29 @@
 
 import {About,Contact,Experience,Feedbacks,Hero,Navbar,Tech,Works} from './components';
-import { StarsCanvas } from "./components";
 import "./App.css"
 import AnimateLetters from "./AnimateLetters";
 import Home from "./Home";
-import { useRef, useState } from "react";
+import { Suspense, lazy, useRef, useState } from "react";
 import { useEffect } from "react";
 import Profile from './Profile';
-import ContactMe from './ContactMe';
-import { BrowserRouter, Link, Route, Router, Routes } from 'react-router-dom';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-// import { Link } from 'react-scroll';
 function App() {
 
+  // const Home =lazy(()=>import("./Home"))
+  const Profile =lazy(()=>import("./Profile"))
+  // const Contact =lazy(()=>import("./components/Contact"))
 
   const [showDiv, setShowDiv] = useState(true);
 
   useEffect(() => {
-    debugger
     const handleScroll = () => {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const scrollPosition = window.innerHeight + window.pageYOffset;
 
       if (scrollPosition >= documentHeight) {
-    debugger
 
         setShowDiv(false);
       } else {
-    debugger
 
         setShowDiv(true);
       }
@@ -49,7 +44,6 @@ function App() {
   return (
     <>
 
-          
       {showDiv && <div className='__ScrollIndicator'>
               <span></span>
               <span></span>
@@ -58,9 +52,11 @@ function App() {
 
 
       <div className="maincontainer">
-      
+    
           <Home />
+<Suspense fallback={<h1>Loading...</h1>}>
           <Profile />
+      </Suspense>
           <Contact />
         </div>
        

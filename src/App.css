@@ -717,7 +717,7 @@ margin-top: 40px;
 } 
 .__Projects h2:hover{
   
-  color: rgb(63, 99, 255);
+  color: rgb(196, 207, 253);
 } 
 
 .description{}
@@ -760,12 +760,44 @@ margin-top: 40px;
   height:40px;
 } */
 
-
-
+.contact_footer{
+  
+}
+.contact2 h1{
+  font-size: 30px;
+}
 
 
 
 @media screen and (max-width:700px) {
+ 
+    /* .sidenav{
+      right:15%
+    } */
+
+
+  
+}
+
+
+@media screen and  (max-width: 750px){
+  .headerprofile_item{
+    font-size: 12px;
+    height: 56vh;
+  }
+  .headerProfile{
+    height: 100vh;
+  }
+  .ContactMainPage{
+    flex-direction: column;
+  }
+  .flex-item{
+    width: 100%;
+  }
+.btn_carousel{
+  margin-left: 10px;
+}
+
   .__animateClass span{
 
     font-size: 18px;
@@ -776,14 +808,18 @@ margin-top: 40px;
   }
 
   .left-section {
-    width: 100%;
+    width: 0;
   }
 
   .right-section {
     width: 100%;
+    text-align: center;
+    padding-right: 11%;
+    height: 50%;
+
   }
   .description{
-    /* font-size: 7px; */
+    font-size: 10px;
   }
 
    .__animateClass{
@@ -829,29 +865,25 @@ margin-top: 40px;
       line-height: 16px;
     }
 
-    /* .sidenav{
-      right:15%
-    } */
 
 
-  
-}
+    .contact2 h1{
+      font-size: 20px;
+    }
+    
 
 
-@media screen and  (max-width: 750px){
-  .headerprofile_item{
-    font-size: 12px;
-    height: 80vh;
-  }
-  .headerProfile{
-    height: 100vh;
-  }
-  .ContactMainPage{
-    flex-direction: column;
-  }
-  .flex-item{
-    width: 100%;
-  }
+
+
+
+
+
+
+
+
+
+
+
 
  
 }
@@ -893,7 +925,7 @@ margin-top: 40px;
 
 
 
-@media screen and (max-width:1350px){
+@media screen and  (min-width: 1200px) and (max-width:1350px){
   .__animateClass span{
     font-size: 5vw;
    }

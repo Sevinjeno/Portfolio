@@ -88,7 +88,7 @@ function RippleEffect(e){
 
                 </div>
                 <div className="reveal" ref={refBody}>
-                  <div    style={{color:"grey"}} className=" description"> Web Developer / JavaScript Fan / React js Node js enthusiast </div> 
+                  <div    style={{color:"grey"}} className=" description"> Web Developer / JavaScript Devotee / React js Node js enthusiast </div> 
                   <Link to="prof"><div id="__aboutme">About Me<span style={{}}><BiCaretDown /> </span> </div>
                 </Link>
 

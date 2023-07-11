@@ -14,9 +14,9 @@ const TextSphere = () => {
           'CSS',
           'C#',
           'JavaScript',
-          'React',
+          'React Js',
           'C++',
-          'Next',
+          'Next JS',
           'NodeJS',
           'Jquery',
           'ES6',
@@ -25,8 +25,8 @@ const TextSphere = () => {
         ];
     
         const options = {
-          radius: 300 ,
-          maxSpeed: 'normal',
+          radius: 400 ,
+          maxSpeed: 'fast',
           initSpeed: 'normal',
           keep: true,
         };

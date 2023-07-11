@@ -2,13 +2,13 @@
 
 .text-sphere{
     position: relative;
-    width: 80%;
+    width: 50%;
     /* height:100vh; */
     display: flex;
-    /* justify-content: center ;
-    align-items: center; */
+     /* justify-content: center ; */
+    /* align-items: center;  */
     /* background: black; */
-    padding-left: 10%;
+    padding-left:15%;
 }
 
 .tagcloud{
@@ -16,9 +16,9 @@
     top: 0;
     left: 0;
     font-family: 'Dosis', sans-serif;
-    font-weight: 300;
+    font-weight: 180;
     letter-spacing: 0.0625em;
-    font-size: 1.3em;
+    font-size:11px;
 }
 
 .tagcloud--item{
@@ -27,5 +27,4 @@
 }
 .tagcloud--item:hover{
     color: rgb(255, 255, 255);
-    
 }

@@ -9,6 +9,9 @@ import { Element } from 'react-scroll';
 import { FaLinkedin } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 
+import call from "../../src/assets/call.png"
+import whatsapp from "../../src/assets/whataspp.png"
+
 
 
 const Contact = () => {
@@ -149,15 +152,17 @@ const Contact = () => {
                    </div> */}
 
                    <div className='contact2 flex-item' > 
-                        <h1 style={{fontSize:"30px"}}>You can <span style={{color:"Blue"}}>Connect</span> With me Directly on  </h1>
-                        <p style={{paddingLeft:"25%",paddingTop:"2%"}}>
+                        <h1>You can <span style={{color:"Blue"}}>Connect</span> With me Directly on  </h1>
+                        <p className='contact_footer'>
                             <span id="gmail"><a href="mailto:7jenodev@gmail.com" target='_blank'><IoIosMail size="50px" style={{display:"inline-block",cursor:"pointer"}}/></a></span>
                             <span id="linkedin">
                             <a href="https://www.linkedin.com/in/sevinjenofernando/" target="_blank"><FaLinkedin size="40px" style={{display:"inline-block",marginLeft:"20px",cursor:"pointer"}} /></a>
+                            <a href="tel:+918999835317" target='_blank'> <span style={{color:"Blue",display:"inline-block"}}> <img style={{width:"40px",height:"40px",display:"inline-block",marginLeft:"20px"}} src={call} alt='call'/>  </span></a>
+                            <a href="https://wa.me/+918999835317" target='_blank'><span style={{fontSize:"20px",color:"Blue",fontWeight:"700",display:"inline-block"}}> <img style={{width:"40px",height:"40px",display:"inline-block",marginLeft:"20px"}} src={whatsapp} alt='call'/> </span></a>
+
                             </span>&nbsp;
                         </p>
 
-                        <p style={{fontSize:"18px",marginTop:"2%"}}>Or you can also can  <a href="tel:+918999835317"> <span style={{fontSize:"20px",color:"Blue",fontWeight:"700"}}>  Call me</span> or </a>  <a href="https://wa.me/+918999835317" target='_blank'><span style={{fontSize:"20px",color:"Blue",fontWeight:"700"}}>Send a WhatsApp message</span></a> </p>
 
                        
                    </div>
