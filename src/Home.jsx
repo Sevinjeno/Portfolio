@@ -10,6 +10,8 @@ import { BiCaretDown } from "react-icons/bi";
 import { BiDownload } from "react-icons/bi";
 import { color, useInView } from "framer-motion";
 import { Link } from 'react-scroll';
+import CV from '../public/Resume_2023.pdf'
+
 const Home = () => {
   const elementRef = useRef(null);
   
@@ -97,7 +99,7 @@ function RippleEffect(e){
        </div>
       </div>
      </div>
-         <div id="__CV"><span style={{}}><BiDownload /> </span>Resume</div>
+         <div id="__CV"><a href={CV} download><span style={{}}><BiDownload /> </span>Resume </a></div>
      </>
    
 

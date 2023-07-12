@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { BallCanvas } from './canvas'
 import SectionWrapper from '../hoc/SectionWrapper'
 import { technologies } from '../constants'
 import { styles } from '../styles'
 import { useInView } from 'framer-motion'
+import About from './About'
+
 
 const Tech = () => {
 
@@ -17,7 +19,24 @@ const inview_main=useInView(ref2)
 const inview_body=useInView(ref3)
 const inview_foot=useInView(ref3)
 
+const [isMobile,setIsMobile]=useState(false);
 
+useEffect(()=>{
+  const mediaQuery=window.matchMedia('(max-width:600px)');
+  setIsMobile(mediaQuery.matches);
+  console.log(isMobile)
+  const handleMediaQueryChange=(event)=>{
+    setIsMobile(event.matches);
+  }
+  mediaQuery.addEventListener('change',
+  handleMediaQueryChange);
+  console.log(isMobile)
+
+  return()=>{
+    mediaQuery.removeEventListener('change',handleMediaQueryChange);
+  }
+
+},[])
 
 
 useEffect(()=>{
@@ -98,16 +117,23 @@ useEffect(()=>{
 
 
 
-
+    
 
    <div className="flex flex-row flex-wrap justify-center gap-10 pt-10">
-    {technologies.map((technology)=>(
-      <div className='w-28 h-28' key={technology.name}>
 
-        <BallCanvas icon={technology.icon} />
-       <div className="px-5 py-1"> {technology.name}</div>
-        </div>
-    ))}
+
+  
+
+
+                  {
+                    isMobile?"":
+                    technologies.map((technology)=>(
+                    <div className='w-28 h-28' key={technology.name}>
+
+                      <BallCanvas icon={technology.icon} />
+                    <div className="px-5 py-1"> {technology.name}</div>
+                      </div>
+                  ))}
    </div>
 
 </>

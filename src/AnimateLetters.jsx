@@ -1,6 +1,5 @@
 import React from 'react'
 import Textspan from './Textspan'
-import CV from '../public/resume.pdf'
 import { styles } from './styles'
 import { motion } from 'framer-motion'
 

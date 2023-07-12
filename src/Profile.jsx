@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { About, Experience, Hero, Navbar, Tech } from './components'
 import TextSphere from './components/TextSphere'
 import { motion, useAnimation, useInView } from 'framer-motion'   
@@ -36,6 +36,40 @@ const Profile = () => {
             }
       },[inview_body])
 
+
+
+      const [isMobile,setIsMobile]=useState(false);
+
+      useEffect(()=>{
+        const mediaQuery=window.matchMedia('(max-width:600px)');
+        setIsMobile(mediaQuery.matches);
+        console.log(isMobile)
+        const handleMediaQueryChange=(event)=>{
+          setIsMobile(event.matches);
+        }
+        mediaQuery.addEventListener('change',
+        handleMediaQueryChange);
+        console.log(isMobile)
+      
+        return()=>{
+          mediaQuery.removeEventListener('change',handleMediaQueryChange);
+        }
+      
+      },[])
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
           <Element id="prof">
      <motion.div 
@@ -55,15 +89,18 @@ const Profile = () => {
                               //    animate={maincontrols}
                               //    transition={{duration:2,delay:0.25}}
                                     >
-                       <p>Driven by my love for coding, I pursued a Master's degree in Computer Applications to solidify my knowledge in the field. As a web developer, I thrive on the opportunity to bring ideas to life through intuitive and user-friendly websites</p>
-                       <p> I specialize in developing seamless websites that provide intuitive user experiences. From eye-catching visuals to smooth navigation, I ensure that every aspect of the website is optimized for optimal engagement.</p>
-                       <p></p>
+                               
+                       <p>Driven by my love for coding, I pursued a Master's degree in Computer Applications to solidify my knowledge in the field.</p>
+                       <p>I have collaborated with cross-functional teams to deliver successful projects and have a strong track record of meeting deadlines. I am excited to bring my creativity and technical skills to create exceptional user experiences.</p>
+                       <p>As a web developer, I am not only passionate about creating innovative websites but also enjoy pursuing my hobbies outside of work. I am a huge fan of Football, and I love to trek in my free time. These activities keep me energized and motivated, and I believe they help me bring a fresh perspective to my work. As Phil Knight, the founder of Nike, once said, "We’ve consciously tried to be innovative in all areas of the business, and right now that means advertising. We need a way of making sure people hear our message through all the clutter".Similarly, I believe that pursuing my interests outside of work helps me stay creative and innovative in my approach to web development.</p>    
 
                      </motion.div>
                      </div>
                    </div>
                       {/* <TextSphere /> */}
                         <Tech /> 
+                        {isMobile&& <About />}
+                     
                        <Experience />
                         <Projects />
                

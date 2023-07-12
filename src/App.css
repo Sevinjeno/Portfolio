@@ -371,7 +371,7 @@ border: 2px white;
     left: 0;
     width: 100%;
     height: 100%;
-    background:#b31bce ;
+    background:#879afa ;
     transform-origin: right;
     transition: 0.5s;
     transition-delay: 0.8s;
@@ -437,7 +437,9 @@ border: 2px white;
     transition-delay: 0.5s;
     
   } */
-   
+  .__skills a{
+    color: #11e2ec;
+  }
   
   
   .main{
@@ -511,11 +513,13 @@ border: 2px white;
         }
         #profile_heading{
           font-size: 35px;
+          font-family: monospace;
 
         }
         .headerprofile_item p{
           padding-top: 2%;
           padding-left: 6%;
+          font-family: system-ui;
         }
 
 
@@ -569,9 +573,10 @@ border: 2px white;
  
   position: relative;
   display: flex;
-  justify-content:center;
-  align-items:center;
-  height:80vh;
+  justify-content: center;
+  align-items: center;
+  height: 1100px;
+  flex-direction: column;
 }
 .__About .midAbout1 {
 width: 100%;
@@ -769,20 +774,53 @@ margin-top: 40px;
 
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:376px) {
+ 
+  /* .sidenav{
+    right:15%
+  } */
+  .__skills{
+    margin-top:150%;
+  }
+
+  .headerprofile_item{
+    font-size: 9px;
+    height: 100vh;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 400px) and (max-width:700px) {
  
     /* .sidenav{
       right:15%
     } */
+    .__skills{
+      margin-top: 90%;
+    }
 
+    .headerprofile_item{
+      font-size: 10px;
+      height: 100vh;
+    }
 
   
 }
 
 
 @media screen and  (max-width: 750px){
+ 
   .headerprofile_item{
-    font-size: 12px;
+    font-size: 15px;
     height: 56vh;
   }
   .headerProfile{
@@ -907,6 +945,7 @@ margin-top: 40px;
   .__project_thumb{
     max-width: 50%;
   }
+
 }
 
 
@@ -940,4 +979,41 @@ margin-top: 40px;
   .right-section{
    height: 50%;
   }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and  (min-width: 750px)and  (max-width:900px){
+
+  .__skills{
+    margin-top:70%;
+  }
+  }
+
+
+
+
+@media screen and  (min-width: 900px) and (max-width:1105px){
+
+  .__skills{
+    margin-top: 50%;
+  }
+  }
+
+
+
+
+
+@media screen and  (min-width: 1106px)and  (max-width:2500px){
+
+.__skills{
+  margin-top: 20%;
+}
 }

@@ -7,12 +7,8 @@ import { Suspense, lazy, useRef, useState } from "react";
 import { useEffect } from "react";
 import Profile from './Profile';
 function App() {
-
-  // const Home =lazy(()=>import("./Home"))
-  const Profile =lazy(()=>import("./Profile"))
-  // const Contact =lazy(()=>import("./components/Contact"))
-
   const [showDiv, setShowDiv] = useState(true);
+  const [isMobile,setIsMobile]=useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,15 +32,31 @@ function App() {
     };
   }, []);
 
-  //setting active class
 
-  //rippling effect on button 
+  useEffect(()=>{
+    const mediaQuery=window.matchMedia('(max-width:600px)');
+    setIsMobile(mediaQuery.matches);
+    console.log(isMobile)
+    const handleMediaQueryChange=(event)=>{
+      setIsMobile(event.matches);
+    }
+    mediaQuery.addEventListener('change',
+    handleMediaQueryChange);
+    console.log(isMobile)
+  
+    return()=>{
+      mediaQuery.removeEventListener('change',handleMediaQueryChange);
+    }
+  
+  },[])
+  
+
   
 
   return (
     <>
 
-      {showDiv && <div className='__ScrollIndicator'>
+      {showDiv && !isMobile &&<div className='__ScrollIndicator'>
               <span></span>
               <span></span>
               <span></span>
@@ -54,9 +66,7 @@ function App() {
       <div className="maincontainer">
     
           <Home />
-<Suspense fallback={<h1>Loading...</h1>}>
           <Profile />
-      </Suspense>
           <Contact />
         </div>
        
