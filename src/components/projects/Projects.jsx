@@ -14,7 +14,8 @@ import web2 from "../../../public/Projects/web/2.png"
 
 import youtube_ from "/src/assets/youtube.mp4"
 import website_ from "/src/assets/web.mp4"
-
+import handpose1 from "/src/assets/handpose1.png"
+import handpose2 from "/src/assets/handpose2.png"
 
 import { ChevronsRight } from 'react-feather'
 
@@ -35,12 +36,52 @@ const Projects = () => {
   const Slides4=[
     web1,web2
   ]
+  const Slides5=[
+    handpose1,handpose2
+
+  ]
 
   return (
     <> 
         <h2 className="text-center __head">
                Projects
           </h2>
+
+
+             
+              {/* Handpose */}
+
+
+          <div className="__Projects" >
+     
+    
+     <div className="__projectInfo">
+           <h2>Dynamic Hand Gesture recognition</h2>
+          <p>Developed a Hand Recognition App where when the hand moves it detects the hand</p>
+          <p>To view Project <ChevronsRight size={20} style={{display:'inline-block'}}/><a href='https://calm-brioche-a706cd.netlify.app' target='_blank'>HandPose</a></p>
+          <p><span>Built With </span>TensorFlow ReactJs CSS3 Javascript</p>
+
+     </div>
+     <div className="__project_thumb" style={{width:"100%"}}>
+  
+  <Carousel>
+         {[
+              
+              
+                    ...Slides5.map((e,i)=>(
+                      <img src={e} key={i+30} alt={`Slide ${i + 30}`} />
+                    )),
+              
+              ]}             
+  </Carousel>
+     
+  </div>
+         </div>
+
+
+
+
+
 
               {/* youtube */}
 
@@ -50,7 +91,9 @@ const Projects = () => {
      <div className="__projectInfo">
            <h2>Custom youtube</h2>
           <p>Deployed Custom Youtube . Developed the front-end using modern web technologies such as HTML5, CSS3, and JavaScript, ensuring a responsive and intuitive user experience across devices.Developed a robust search functionality, allowing users to easily discover videos based on keywords, categories, and trending topics. </p>
+          <p>To view Project <ChevronsRight size={20} style={{display:'inline-block'}}/><a href='https://bespoke-begonia-55ace2.netlify.app' target='_blank'>Custom Youtube</a></p>
           <p><span>Built With </span>ReactJs CSS3 Javascript</p>
+
      </div>
      <div className="__project_thumb" style={{width:"70%"}}>
   

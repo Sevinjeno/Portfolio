@@ -125,12 +125,6 @@ cursor: pointer;
 }  
 
 
-
-
-
-
-
-
 .__ScrollIndicator{
   position: fixed;
   top: 90%;
@@ -575,7 +569,7 @@ border: 2px white;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 1100px;
+  height: 1200px;
   flex-direction: column;
 }
 .__About .midAbout1 {
@@ -684,7 +678,8 @@ margin-top: 40px;
 }
 
 .__Projects > div{
-   padding:20px
+   padding:20px;
+   width: 100%;
 }
 
 .__Projects span{
@@ -780,7 +775,7 @@ margin-top: 40px;
     right:15%
   } */
   .__skills{
-    margin-top:150%;
+    margin-top:120%;
   }
 
   .headerprofile_item{
@@ -833,8 +828,17 @@ margin-top: 40px;
     width: 100%;
   }
 .btn_carousel{
-  margin-left: 10px;
+  width: 34px;
+  height: 35px;
 }
+.btn-svg{
+  padding: 7px;
+  margin: -7px;
+}
+.bottom-carousel{
+  top: 64px;
+}
+
 
   .__animateClass span{
 

@@ -10,7 +10,7 @@ import { BiCaretDown } from "react-icons/bi";
 import { BiDownload } from "react-icons/bi";
 import { color, useInView } from "framer-motion";
 import { Link } from 'react-scroll';
-import CV from '../public/Resume_2023.pdf'
+import CV from '../public/Resume_latest.pdf'
 
 const Home = () => {
   const elementRef = useRef(null);

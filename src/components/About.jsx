@@ -15,7 +15,7 @@ const ServiceCard =({index,title,icon,name})=>{
       scale:1,
       speed:450,
     }}>
-      <motion.div variants={fadeIn("right" , "spring" , 0.5 * index,0.75)}
+      <div
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
       >
       <div
@@ -26,7 +26,7 @@ const ServiceCard =({index,title,icon,name})=>{
               className='w-10 h-10 object-contain' />
               <h3 className='text-white text-[15px] font-bold text-center'>{name}</h3>
           </div>
-      </motion.div>
+      </div>
     </Tilt>
   )
 }
