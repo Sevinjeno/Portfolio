@@ -10,7 +10,7 @@ import { BiCaretDown } from "react-icons/bi";
 import { BiDownload } from "react-icons/bi";
 import { color, useInView } from "framer-motion";
 import { Link } from 'react-scroll';
-import CV from '../public/Resume_latest.pdf'
+import CV from '../public/Sevinjeno-Fernando-Resume.pdf';
 
 const Home = () => {
   const elementRef = useRef(null);
@@ -45,7 +45,6 @@ useEffect(()=>{
 
 },[inviewBody])
 
-
 function RippleEffect(e){
   let div=document.createElement("div")
   div.classList.add("ripple");
@@ -60,12 +59,6 @@ function RippleEffect(e){
 
  }
 }
-
-
-
-
-
-
   return (
     <>
     
@@ -74,7 +67,7 @@ function RippleEffect(e){
      <Link to="cont" spy={true} smooth={true} offset={500} duration={300 }    ref={elementRef} className="sidenav" onClick={RippleEffect}>
         Contact
        </Link>
-     <h1 className={`__title  ${active} `}>Web Developer </h1>
+     <h1 className={`__title  ${active} `}>Software Engineer </h1>
 
      <div className="main">
      <div className="left-section item">

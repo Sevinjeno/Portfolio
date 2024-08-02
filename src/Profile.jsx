@@ -56,19 +56,6 @@ const Profile = () => {
         }
       
       },[])
-      
-
-
-
-
-
-
-
-
-
-
-
-
 
   return (
           <Element id="prof">
@@ -80,24 +67,17 @@ const Profile = () => {
                      <div className="headerprofile_item ">
                      <h1  ref={ref} id="profile_heading" className='reveal'> Hello there! I'm Sevinjeno Fernando ,</h1>
                      <motion.div  ref={ref_body} className='reveal'
-                              //     variants={{
-
-                              //       hidden:{opacity:0,y:75},
-                              //       visible:{opacity:1,Y:0}
-                              //     }}
-                              //    initial='hidden'
-                              //    animate={maincontrols}
-                              //    transition={{duration:2,delay:0.25}}
                                     >
-                               
                        <p>Driven by my love for coding, I pursued a Master's degree in Computer Applications to solidify my knowledge in the field.</p>
-                       <p>I have collaborated with cross-functional teams to deliver successful projects and have a strong track record of meeting deadlines. I am excited to bring my creativity and technical skills to create exceptional user experiences.</p>
-                       <p>As a web developer, I am not only passionate about creating innovative websites but also enjoy pursuing my hobbies outside of work. I am a huge fan of Football, and I love to trek in my free time. These activities keep me energized and motivated, and I believe they help me bring a fresh perspective to my work. As Phil Knight, the founder of Nike, once said, "We’ve consciously tried to be innovative in all areas of the business, and right now that means advertising. We need a way of making sure people hear our message through all the clutter".Similarly, I believe that pursuing my interests outside of work helps me stay creative and innovative in my approach to web development.</p>    
-
+                       <p>I have extensive experience working with cross-functional teams across various industries, delivering successful projects</p>
+                       <p>My expertise covers both frontend and backend development, including AWS management and leading development projects.</p>
+                       <p>I also have strong technical skills in C++ and C#, having completed numerous projects for different companies.</p>
+                       <p>I am always enthusiastic about exploring new ideas and projects, ready to embrace new challenges.</p>
+                     
+                        <p>Beyond my professional life, I love football and trekking, which keep me energized and bring a fresh perspective to my work.</p>
                      </motion.div>
                      </div>
                    </div>
-                      {/* <TextSphere /> */}
                         <Tech /> 
                         {isMobile&& <About />}
                      

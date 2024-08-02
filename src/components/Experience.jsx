@@ -59,6 +59,8 @@ import { experiences } from '../constants';
 const Experience = () => {
   return (
      <>
+     <div className='__Experience'>
+
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>
              My Journey...
@@ -67,6 +69,7 @@ const Experience = () => {
                Work Experience
           </h2>
         </motion.div>
+     </div>
 
         <div className="mt-20 flex flex-col">
           <VerticalTimeline>

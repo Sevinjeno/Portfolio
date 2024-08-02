@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
-
 import {styles} from '../styles'
 import {slideIn} from '../utils/motion'
 import SectionWrapper from '../hoc/SectionWrapper';
@@ -58,16 +57,16 @@ const Contact = () => {
   }
   return (
   <>
-    <p className={styles.sectionSubText} style={{textAlign:"center",marginTop:"2%"}}>
+    <p id="__getintouch" className={styles.sectionSubText} style={{}}>
               Get in touch
             </p>
-            <h3 className={styles.sectionHeadText} style={{textAlign:"center"}}>
+            {/* <h3  style={{textAlign:"center"}}>
               Contact.
-            </h3>
+            </h3> */}
 
             <div className='ContactMainPage'>
 
-                   <div className='contact1 flex-item'>
+                   {/* <div className='contact1 flex-item'>
 
 
                       <Element id="cont" className=''>
@@ -80,7 +79,7 @@ const Contact = () => {
                                 <h3 className={styles.sectionHeadText}>
                                   Contact.
                                 </h3> */}
-                                <form
+                                {/* <form
                                   ref={formref}
                                   onSubmit={handleSubmit}
                                   className='mt-1 flex flex-col gap-5'
@@ -99,6 +98,7 @@ const Contact = () => {
                                           placeholder:text-secondary
                                           text-white rounded-lg outlined-none
                                           border-none font-medium'
+                                          required
                                           />
                                     </label>
                                     <label className='flex flex-col'>
@@ -115,6 +115,7 @@ const Contact = () => {
                                           placeholder:text-secondary
                                           text-white rounded-lg outlined-none
                                           border-none font-medium'
+                                          required
                                           />
                                     </label>
                                     <label className='flex flex-col'>
@@ -143,22 +144,22 @@ const Contact = () => {
                                   </form>
                             </motion.div>
 
-                        </Element>
+                        </Element> */}
 
 
-                   </div>
+                   {/* </div> */} 
                    {/* <div  className="flex-item" style={{height:"20vh",width:"2px",border:"2px solid white"}}>
 
                    </div> */}
 
-                   <div className='contact2 flex-item' > 
-                        <h1>You can <span style={{color:"Blue"}}>Connect</span> With me Directly on  </h1>
-                        <p className='contact_footer'>
+                   <div className='cont'> 
+                        <h1 className='Contact__head'>You can <span style={{color:"Blue"}}>Connect</span> With me Directly on </h1>
+                        <p className='contact_footer contact2' style={{marginTop:"2%",marginBottom:"15%"}}>
                             <span id="gmail"><a href="mailto:7jenodev@gmail.com" target='_blank'><IoIosMail size="50px" style={{display:"inline-block",cursor:"pointer"}}/></a></span>
                             <span id="linkedin">
                             <a href="https://www.linkedin.com/in/sevinjenofernando/" target="_blank"><FaLinkedin size="40px" style={{display:"inline-block",marginLeft:"20px",cursor:"pointer"}} /></a>
-                            <a href="tel:+918999835317" target='_blank'> <span style={{color:"Blue",display:"inline-block"}}> <img style={{width:"40px",height:"40px",display:"inline-block",marginLeft:"20px"}} src={call} alt='call'/>  </span></a>
-                            <a href="https://wa.me/+918999835317" target='_blank'><span style={{fontSize:"20px",color:"Blue",fontWeight:"700",display:"inline-block"}}> <img style={{width:"40px",height:"40px",display:"inline-block",marginLeft:"20px"}} src={whatsapp} alt='call'/> </span></a>
+                            <a href="tel:+918999835317" target='_blank'> <span style={{color:"Blue",display:"inline-block"}}> <img style={{display:"inline-block",marginLeft:"20px"}} src={call} alt='call'/>  </span></a>
+                            <a href="https://wa.me/+918999835317" target='_blank'><span style={{fontSize:"20px",color:"Blue",fontWeight:"700",display:"inline-block"}}> <img style={{display:"inline-block",marginLeft:"20px"}} src={whatsapp} alt='call'/> </span></a>
 
                             </span>&nbsp;
                         </p>

@@ -434,6 +434,9 @@ border: 2px white;
   .__skills a{
     color: #11e2ec;
   }
+  .__skills{
+    margin-top: 10%;
+  }
   
   
   .main{
@@ -506,7 +509,7 @@ border: 2px white;
            /* width: 50%; */
         }
         #profile_heading{
-          font-size: 35px;
+          font-size: 1.8rem;
           font-family: monospace;
 
         }
@@ -565,12 +568,10 @@ border: 2px white;
 
 .__About{
  
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 1200px;
-  flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .__About .midAbout1 {
 width: 100%;
@@ -697,7 +698,7 @@ margin-top: 40px;
 }
 
 .__head{
-  font-size: 60px;
+  font-size: 2.2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -709,10 +710,11 @@ margin-top: 40px;
 .__Projects p{
   /* text-align: center; */
   padding-top: 20px;
+  font-size: 0.8rem;
 }
 
 .__Projects h2{
-  font-size: 30px;
+  font-size:1.5rem;
   color: rgb(245, 245, 245);
 } 
 .__Projects h2:hover{
@@ -737,10 +739,16 @@ margin-top: 40px;
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  margin-top: 1%;
 }
 
 .contact1{
   width: 30%;
+}
+
+#__getintouch{
+text-align:center;
+margin-top:5%;
 }
 
 .flex-item{
@@ -750,7 +758,7 @@ margin-top: 40px;
 }
 
 .contact2{
-  padding-left: 15%;
+  padding-left: 23%;
 }
 
 
@@ -760,31 +768,69 @@ margin-top: 40px;
   height:40px;
 } */
 
-.contact_footer{
-  
-}
-.contact2 h1{
-  font-size: 30px;
+.contact_footer img{
+  width: 40px;
+  height: 40px;
 }
 
+.Contact__head{
+  font-size: 1.5rem;
+}
+
+.__Experience{
+  margin-top: 10%;
+  margin-left: 5%;
+}
 
 
-@media screen and (max-width:376px) {
+
+ @media screen and (max-width:307px) {
  
-  /* .sidenav{
+  .sidenav{
     right:15%
-  } */
-  .__skills{
-    margin-top:120%;
-  }
+  } 
+ .__skills{
+    /* margin-top:120%; */
+  } 
 
   .headerprofile_item{
     font-size: 9px;
     height: 100vh;
+  } 
+
+
+} 
+
+@media screen and (max-width:450px) {
+ 
+ .contact2{
+font-size: 1rem;
+padding-left: 10%;
+ }
+
+ .Contact__head{
+  font-size: 1rem;
+}
+.__title  {
+  font-size: 8px;
+}
+.__Home h1{
+  font-size: 8px;
+
+}
+#profile_heading{
+  font-size: 1.2rem;
+}
+.headerprofile_item p{
+  font-size: 0.8rem;
+
+}
+#__getintouch{
+  margin-top:10%;
   }
 
 
-}
+} 
 
 
 
@@ -794,13 +840,10 @@ margin-top: 40px;
 
 
 
-@media screen and (min-width: 400px) and (max-width:700px) {
- 
-    /* .sidenav{
-      right:15%
-    } */
+@media screen and (min-width: 308px) and (max-width:400px) {
+
     .__skills{
-      margin-top: 90%;
+      /* margin-top: 80%; */
     }
 
     .headerprofile_item{
@@ -811,15 +854,31 @@ margin-top: 40px;
   
 }
 
+@media screen and (min-width: 420px) and (max-width:700px) {
+ 
+  /* .sidenav{
+    right:15%
+  } */
+ 
+
+  .headerprofile_item{
+    font-size: 10px;
+    height: 100vh;
+  }
+
+
+}
+
 
 @media screen and  (max-width: 750px){
  
   .headerprofile_item{
     font-size: 15px;
     height: 56vh;
+    margin-top: 20%;
   }
   .headerProfile{
-    height: 100vh;
+    /* height: 100vh; */
   }
   .ContactMainPage{
     flex-direction: column;
@@ -880,8 +939,9 @@ margin-top: 40px;
 
     padding-left: 17%;
       padding-top: 25%;
-      font-size: 19px;
-
+      font-size: 1rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
 
   }
   .sidenav{
@@ -906,41 +966,18 @@ margin-top: 40px;
       font-size: 14px;
       line-height: 16px;
     }
-
-
-
     .contact2 h1{
       font-size: 20px;
     }
+
+    .__skills{
+      margin-top: 20%;
+    }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
 }
 
 
-
-
-@media screen and  (min-width: 750px) and  (max-width: 800px){
-.headerprofile_item{
-  font-size: 17px;
-}
-
-
-
-}
 
 @media screen and (max-width:1000px) {
   .__Projects{
@@ -951,21 +988,6 @@ margin-top: 40px;
   }
 
 }
-
-
-
-
-@media screen and (min-width: 1000px) and (max-width:1200px){
-    /* .sidenav{
-      right:15%
-    }
-} */
-}
-
-
-
-
-
 
 
 @media screen and  (min-width: 1200px) and (max-width:1350px){
@@ -988,34 +1010,7 @@ margin-top: 40px;
 
 
 
-
-
-
-
-
-
-@media screen and  (min-width: 750px)and  (max-width:900px){
-
-  .__skills{
-    margin-top:70%;
-  }
-  }
-
-
-
-
-@media screen and  (min-width: 900px) and (max-width:1105px){
-
-  .__skills{
-    margin-top: 50%;
-  }
-  }
-
-
-
-
-
-@media screen and  (min-width: 1106px)and  (max-width:2500px){
+@media screen and  (min-width: 800px)and  (max-width:2500px){
 
 .__skills{
   margin-top: 20%;

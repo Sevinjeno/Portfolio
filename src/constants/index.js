@@ -61,10 +61,6 @@ import {
   
   const technologies = [
     {
-      name: "HTML 5",
-      icon: html,
-    },
-    {
       name: "CSS 3",
       icon: css,
     },
@@ -81,25 +77,18 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
       name: "Node JS",
       icon: nodejs,
+    },
+    {
+      name: "Redux",
+      icon: redux,
     },
     {
       name: "MongoDB",
       icon: mongodb,
     },
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
+   
     {
       name: "git",
       icon: git,
@@ -116,16 +105,16 @@ import {
   
   const experiences = [
     {
-      title: "Software Developer",
-      company_name: "Textronics",
-      icon: javascript,
+      title: "Senior Software Engineer",
+      company_name: "SuperDNA Technolab Private Limited",
+      icon: reactjs,
       iconBg: "#383E56",
-      date: "December 2020 - June 2022",
+      date: "September 2023 - August 2024",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Refactored a project into React.js, modernizing the frontend and enhancing performance.",
+        "Addressed and resolved backend issues, performed database migrations, and created new APIs to support ongoing development.",
+        "Utilized AWS S3 for efficient file storage and retrieval, and integrated email functionality to send files to clients.",
+        "Contributed to a Vue.js project by managing UI functionalities and integrating 3D model features, including implementing validation processes.",
       ],
     },
     {
@@ -141,6 +130,20 @@ import {
         "Implemented Tailwind css for Sundirect Go",
       ],
     },
+    {
+      title: "Software Developer",
+      company_name: "Textronics",
+      icon: javascript,
+      iconBg: "#383E56",
+      date: "December 2020 - June 2022",
+      points: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
+    },
+   
   ];
   
   const testimonials = [

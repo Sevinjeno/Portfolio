@@ -85,20 +85,6 @@ useEffect(()=>{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
 
 <>
@@ -106,23 +92,13 @@ useEffect(()=>{
        <div className='__skills'>
           <p ref={ref1} className='reveal' style={{fontSize:"20px",color:"darkgray"}}>A PROBLEM IS A CHANCE FOR YOU TO DO YOUR BEST.</p>
           <p ref={ref2}  className='reveal' style={{fontSize:"60px"}}>Skills</p>
-          <p ref={ref3}  className='reveal' style={{fontSize:"20px"}}><span style={{color:"#00FFFF"}}>HTML, CSS, JS,</span> building small and medium web applications with <span style={{color:"#00FFFF"}}>React js,Next js,</span> custom plugins, features, animations, and coding interactive layouts. I have also experience in C# & C++</p>
+          <p ref={ref3}  className='reveal' style={{fontSize:"20px"}}>Advanced skills in<span style={{color:"#00FFFF"}}> JavaScript</span> building medium and large web applications with <span style={{color:"#00FFFF"}}>React js, Node js, Express, Docker, AWS</span> custom plugins, features, animations, and coding interactive layouts. I have also experience in C# & C++</p>
           <p ref={ref4} className='reveal'>Visit my <span style={{cursor:"pointer",fontSize:"25px"}}><a href="https://www.linkedin.com/in/sevinjenofernando/" target='_blank'>Linkedin</a></span> for more details.</p>
       </div>
 
 
-
-
-
-
-
-
-    
-
    <div className="flex flex-row flex-wrap justify-center gap-10 pt-10">
 
-
-  
 
 
                   {

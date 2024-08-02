@@ -32,12 +32,6 @@ const ServiceCard =({index,title,icon,name})=>{
 }
 
 
-
-
-
-
-
-
 const About = () => {
   return (
     <>
