@@ -6,6 +6,9 @@ import Home from "./Home";
 import { Suspense, lazy, useRef, useState } from "react";
 import { useEffect } from "react";
 import Profile from './Profile';
+import { Route, Routes ,BrowserRouter, useLocation } from 'react-router-dom';
+import BlogMain from "./components/blogs/BlogMain"
+import Blog from './components/blogs/Blog';
 function App() {
   const [showDiv, setShowDiv] = useState(true);
   const [isMobile,setIsMobile]=useState(false);
@@ -51,25 +54,37 @@ function App() {
   },[])
   
 
-  
+  const location = useLocation();
+
+  // Check if the current path is a blog route
+  const isBlogRoute = location.pathname.startsWith('/blog');
+
+  console.log("isBlogRoute",isBlogRoute)
 
   return (
     <>
-
-      {showDiv && !isMobile &&<div className='__ScrollIndicator'>
-              <span></span>
-              <span></span>
-              <span></span>
-      </div>}
-
-
-      <div className="maincontainer">
     
-          <Home />
-          <Profile />
-          <Contact />
-        </div>
+                  <Routes>
+                    <Route path="/blog/" element={<BlogMain />} />
+                    <Route path="/blog/:id" element={<Blog />} />
+                  </Routes>
+
+                { !isBlogRoute && showDiv && !isMobile &&<div className='__ScrollIndicator' >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </div>}
+
+              {
+                !isBlogRoute && (
+                <div className="maincontainer">
+                    <Home />
+                    <Profile />
+                    <Contact />
+                  </div>
+                )
        
+     }
     </>
   )
 }

@@ -61,10 +61,8 @@ function RippleEffect(e){
 }
   return (
     <>
-    
-   
      <div  className="__Home">
-     <Link to="cont" spy={true} smooth={true} offset={500} duration={300 }    ref={elementRef} className="sidenav" onClick={RippleEffect}>
+     <Link to="cont" spy={true} smooth={true} offset={500} duration={300 }  ref={elementRef} className="sidenav" onClick={RippleEffect}>
         Contact
        </Link>
      <h1 className={`__title  ${active} `}>Software Engineer </h1>
@@ -83,12 +81,11 @@ function RippleEffect(e){
 
                 </div>
                 <div className="reveal" ref={refBody}>
-                  <div    style={{color:"grey"}} className=" description"> Web Developer / JavaScript Devotee / React js Node js enthusiast </div> 
+                  <div style={{color:"grey"}} className=" description"> Web Developer / JavaScript Devotee / React js Node js enthusiast </div> 
                   <Link to="prof"><div id="__aboutme">About Me<span style={{}}><BiCaretDown /> </span> </div>
                 </Link>
-
                 </div>
-                </div>
+               </div>
        </div>
       </div>
      </div>

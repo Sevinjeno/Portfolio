@@ -11,7 +11,7 @@ import TextSphere from './TextSphere'
 
 const Robo_obj = ({isMobile}) => {
   const modelRef = useRef();
-    const lamp =useGLTF("./cyberpunk/scene.gltf")
+    const lamp =useGLTF("/cyberpunk/scene.gltf")
     useEffect(()=>{
       const model = modelRef.current;
       // Move the model slightly

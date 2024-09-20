@@ -1,0 +1,116 @@
+
+
+
+.blog-container {
+    /* padding: 15%; */
+    padding: 20px;
+    max-width: 900px; /* Adjust to your desired width */
+    margin: 2% auto; 
+    background: rgba(255, 255, 255, 0.041); /* Glass effect */
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(15px); /* Glass blur */
+    box-shadow: 0px 0px 15px rgba(3, 39, 245, 0.596); /* Shadow effect */
+  }
+
+  /* body{
+    background: white;
+  } */
+
+  .blog-detail-gradient {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+    /* border: 2px solid rgba(45, 12, 233, 0.205); */
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  .blog-detail-gradient h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .blog-image {
+    width: 100%; /* Responsive images */
+    border-radius: 10px; /* Rounded corners for images */
+    margin: 20px 0; /* Space around images */
+  }
+
+
+  .blog-content {
+    color: white; /* Text color */
+    line-height: 1.6; /* Better readability */
+    margin: 20px 0; /* Space between paragraphs */
+  }
+  
+
+
+
+.back-button {
+    margin-top: 2%;
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    /* background-color: #007bff; */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; /* Make text bold */
+    background: rgba(0, 2, 126, 0);
+    box-shadow: 50px 5px 5px rgba(0, 0, 0,0.2);
+    backdrop-filter: blur(10px);
+    border:2px solid rgba(255, 255, 255, 0.384);
+    border-radius: 7px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .back-button:hover {
+  border: 2px solid white;
+  }
+  
+  .back-button svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .back-text {
+    font-weight: bold; /* Make sure the "Back" text is bold */
+  }
+
+
+
+  /* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .blog-container {
+      padding: 15px; /* Reduce padding on smaller screens */
+    }
+  
+    .blog-detail-gradient h1 {
+      font-size: 1.5rem; /* Smaller font size for headings */
+    }
+  
+    .back-button {
+      padding: 8px 16px; /* Reduce button padding */
+      font-size: 14px; /* Smaller font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-container {
+      padding: 15px; /* Further reduce padding on very small screens */
+    }
+  
+    .blog-detail-gradient h1 {
+      font-size: 1rem; /* Even smaller font size for headings */
+    }
+  
+    .back-button {
+      padding: 6px 12px; /* Further reduce button padding */
+      font-size: 12px; /* Smaller font size */
+      margin-left: 0; /* Center the button on small screens */
+      margin-top: 1%; /* Adjust margin for small screens */
+    }
+  }
