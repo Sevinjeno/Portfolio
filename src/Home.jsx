@@ -11,6 +11,7 @@ import { BiDownload } from "react-icons/bi";
 import { color, useInView } from "framer-motion";
 import { Link } from 'react-scroll';
 import CV from '../public/Sevinjeno-Fernando-Resume.pdf';
+import { Router,Link as LinkUrl } from "react-router-dom";
 
 const Home = () => {
   const elementRef = useRef(null);
@@ -81,9 +82,14 @@ function RippleEffect(e){
 
                 </div>
                 <div className="reveal" ref={refBody}>
-                  <div style={{color:"grey"}} className=" description"> Web Developer / JavaScript Devotee / React js Node js enthusiast </div> 
+                  <div style={{color:"grey"}} className=" description"> Full Stack Developer / JavaScript Devotee / React js Node js Specialist </div> 
+                  <div className="About__Blogs">
                   <Link to="prof"><div id="__aboutme">About Me<span style={{}}><BiCaretDown /> </span> </div>
-                </Link>
+                   </Link>
+
+                  <LinkUrl to="/blog/"><div id="my__blogs">My Blogs</div></LinkUrl>
+
+                  </div>
                 </div>
                </div>
        </div>

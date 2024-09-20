@@ -9,6 +9,7 @@ import Profile from './Profile';
 import { Route, Routes ,BrowserRouter, useLocation } from 'react-router-dom';
 import BlogMain from "./components/blogs/BlogMain"
 import Blog from './components/blogs/Blog';
+import { AnimatePresence } from 'framer-motion';
 function App() {
   const [showDiv, setShowDiv] = useState(true);
   const [isMobile,setIsMobile]=useState(false);
@@ -63,11 +64,14 @@ function App() {
 
   return (
     <>
-    
+      <AnimatePresence mode="wait">
+
                   <Routes>
                     <Route path="/blog/" element={<BlogMain />} />
                     <Route path="/blog/:id" element={<Blog />} />
                   </Routes>
+
+      </AnimatePresence>
 
                 { !isBlogRoute && showDiv && !isMobile &&<div className='__ScrollIndicator' >
                         <span></span>

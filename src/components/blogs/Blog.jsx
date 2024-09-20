@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import "./blog.css"
 import { BsArrowLeft } from 'react-icons/bs'; // Import the back arrow icon
+import { motion } from "framer-motion";
 
 const blogs = [
   { id: 1, title: "Performance", content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut veniam veritatis ipsam vitae officia reprehenderit sunt ex repellendus qui nostrum eius neque maxime molestiae ullam cum, mollitia aliquid! Voluptatibus voluptatum molestiae neque sint accusamus totam facilis necessitatibus dolores ratione, perspiciatis voluptas sunt vel, nisi doloremque, laborum ea. Laudantium, minus maxime." },
@@ -26,7 +27,13 @@ const navigate = useNavigate();
 
   return (
     <>
-      <button onClick={() => navigate(-1)} className="back-button">
+       <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 2 }}
+    >
+  <button onClick={() => navigate(-1)} className="back-button">
         <BsArrowLeft style={{ marginRight: '8px' }} /> Back 
       </button>
    <div className="blog-container">
@@ -43,6 +50,10 @@ const navigate = useNavigate();
         </div>
       </div>
     </div>
+
+
+    </motion.div>
+    
 
     </>
   );

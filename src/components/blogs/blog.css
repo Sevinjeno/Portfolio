@@ -9,12 +9,13 @@
     background: rgba(255, 255, 255, 0.041); /* Glass effect */
     border-radius: 15px; /* Rounded corners */
     backdrop-filter: blur(15px); /* Glass blur */
-    box-shadow: 0px 0px 15px rgba(3, 39, 245, 0.596); /* Shadow effect */
+    box-shadow: 0px 0px 50px rgba(3, 39, 245, 0.596); /* Shadow effect */
   }
 
-  /* body{
-    background: white;
-  } */
+  .blog-background{
+    background: rgb(3, 0, 22);
+  }
+
 
   .blog-detail-gradient {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
