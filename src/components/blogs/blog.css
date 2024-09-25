@@ -35,6 +35,7 @@
     width: 100%; /* Responsive images */
     border-radius: 10px; /* Rounded corners for images */
     margin: 20px 0; /* Space around images */
+    object-fit: contain;
   }
 
 
@@ -42,6 +43,10 @@
     color: white; /* Text color */
     line-height: 1.6; /* Better readability */
     margin: 20px 0; /* Space between paragraphs */
+  }
+
+  .blog-content h2{
+     font-size: 1.7rem;
   }
   
 

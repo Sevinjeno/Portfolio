@@ -4,9 +4,20 @@ import { useNavigate } from 'react-router-dom';
 import "./blog.css"
 import { BsArrowLeft } from 'react-icons/bs'; // Import the back arrow icon
 import { motion } from "framer-motion";
+import pic2 from "../../../public/Blogs/performance/lazyloading.jpg"
+import pic3 from "../../../public/Blogs/performance/Routing_lazing.jpg"
+import pic4 from "../../../public/Blogs/performance/loadableComponent.jpg"
 
 const blogs = [
-  { id: 1, title: "Performance", content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut veniam veritatis ipsam vitae officia reprehenderit sunt ex repellendus qui nostrum eius neque maxime molestiae ullam cum, mollitia aliquid! Voluptatibus voluptatum molestiae neque sint accusamus totam facilis necessitatibus dolores ratione, perspiciatis voluptas sunt vel, nisi doloremque, laborum ea. Laudantium, minus maxime." },
+  { id: 1,
+     title: "Performance", 
+     topic:<h2>Code Splitting :</h2>,
+     content1: <div>As your React application grows, it can become large and complex. <br/>1 - To optimize performance, you can use lazy loading to load components only when needed. This reduces the initial load time of your application. <br />In React, this can be done with <strong>React.lazy() and Suspense</strong></div> ,
+     content2:<div>2 - Code splitting becomes more effective when done with route-based components.<br /> Let’s split the code for different routes using <strong>React.lazy() and React Router.</strong> </div>,
+     content3:<div>3 - <strong>Loadable Components</strong> is a library for React that allows you to load components dynamically. It provides an easy way to implement code splitting<br /> One of the powerful features of Loadable Components is <strong>prefetching</strong> it allows us to load the component before hand. To use this prefetching we use preload function which is inbuilt .<br /> Here's a simple example to illustrate this:</div>
+    },
+
+
   { id: 2, title: "Blog Title 2", content: "This is the full content of Blog 2." },
   // Add more blogs here...
 ];
@@ -15,6 +26,7 @@ const Blog = () => {
 const navigate = useNavigate();
   const { id } = useParams();
   const blog = blogs.find(blog => blog.id === parseInt(id));
+  console.log("Blog check ",blog)
 
   useEffect(() => {
     document.body.classList.add('blog-background');
@@ -42,11 +54,16 @@ const navigate = useNavigate();
           <h1>{blog.title}</h1>
         </div>
         <div className="blog-content">
-          <p>{blog.content}</p>
-          <img src={blog.image} alt="Blog visual" className="blog-image" />
-          <p>{blog.content}</p>
-          <img src={blog.image} alt="Blog visual" className="blog-image" />
-          <p>{blog.content}</p>
+             {blog.topic} <br />
+            {blog.content1}
+          <img src={pic2} alt="Blog visual" className="blog-image" />
+          {blog.content2}
+          <img src={pic3} alt="Blog visual" className="blog-image" />
+          {blog.content3}
+          <img src={pic4} alt="Blog visual" className="blog-image" />
+
+          {/* //Bundle analysis: Use tools like Webpack’s bundle-analyzer to check the size of your bundles and identify opportunities for code splitting. */}
+
         </div>
       </div>
     </div>
