@@ -1,27 +1,69 @@
 
+/* 
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+.background__image{
+  margin-top: 1%;
+  max-width: 100%;
+  height: 80vh; /* Adjust based on your desired height */
+  position: relative;
+  overflow: hidden;
+}
+
+.background__image img{
+  width: 100%;   /* Makes the image take the full width */
+  height: auto;  /* Makes the image cover the full height */
+  object-fit: cover;  /* Ensures the image behaves like a cover, cropping if necessary */
+  object-position:center;  /* Centers the image within the container */
+  /* filter: brightness(90%); */
+  /* filter: blur(2px); */
+  filter: brightness(80%) contrast(120%) saturate(200%);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; /* Adjust to position vertically */
+  left: 50%; /* Adjust to position horizontally */
+  transform: translate(-50%, -50%); /* Centers the text */
+  color: white; /* Text color for better visibility */
+  text-align: center; /* Align the text */
+  background-color: rgba(0, 0, 0, 0.068); /* Optional: Add semi-transparent background for better readability */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 3rem;
+  font-weight: 500;
+}
 
 
 .blog-container {
     /* padding: 15%; */
     padding: 20px;
-    max-width: 900px; /* Adjust to your desired width */
-    margin: 2% auto; 
-    background: rgba(255, 255, 255, 0.041); /* Glass effect */
+    max-width: 1300px; /* Adjust to your desired width */
+    margin:  auto; 
+    background: rgb(255, 255, 255); /* Glass effect */
     border-radius: 15px; /* Rounded corners */
     backdrop-filter: blur(15px); /* Glass blur */
-    box-shadow: 0px 0px 50px rgba(3, 39, 245, 0.596); /* Shadow effect */
+    /* box-shadow: 0px 0px 50px rgba(3, 39, 245, 0.596); Shadow effect */
+    color: black;
+
   }
 
   .blog-background{
-    background: rgb(3, 0, 22);
+    background: rgb(255, 255, 255);
   }
 
 
   .blog-detail-gradient {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)); */
     border-radius: 10px;
     /* border: 2px solid rgba(45, 12, 233, 0.205); */
-    padding: 20px;
+    /* padding: 20px; */
     margin-bottom: 20px;
   }
 
@@ -32,22 +74,49 @@
   }
 
   .blog-image {
-    width: 100%; /* Responsive images */
+    width: 55%; /* Responsive images */
     border-radius: 10px; /* Rounded corners for images */
     margin: 20px 0; /* Space around images */
     object-fit: contain;
   }
 
+  .Motto{
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-style: italic;
+    text-align: center;
+  }
+
 
   .blog-content {
-    color: white; /* Text color */
-    line-height: 1.6; /* Better readability */
-    margin: 20px 0; /* Space between paragraphs */
+    color: rgb(0, 0, 0); /* Text color */
+    line-height: 2; /* Better readability */
+    /* margin: 20px 0; Space between paragraphs */
+    font-family: "Inter", sans-serif;
+    font-optical-sizing:auto;
+    font-weight:400;
+    font-style: normal;
   }
 
   .blog-content h2{
-     font-size: 1.7rem;
+     font-size: 1.6rem;
+     font-family: "Poppins", sans-serif;
+    font-optical-sizing:auto;
+    font-weight:400;
+    font-style: normal;
   }
+
+  .blog-content h1{
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+   font-optical-sizing:auto;
+   font-weight:600;
+   font-style: normal;
+ }
+ 
   
 
 
@@ -59,22 +128,22 @@
     align-items: center;
     padding: 10px 20px;
     /* background-color: #007bff; */
-    color: white;
+    color: rgb(128, 88, 238);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold; /* Make text bold */
-    background: rgba(0, 2, 126, 0);
+    background: rgba(18, 21, 211, 0);
     box-shadow: 50px 5px 5px rgba(0, 0, 0,0.2);
     backdrop-filter: blur(10px);
-    border:2px solid rgba(255, 255, 255, 0.384);
+    border:2px solid rgba(253, 253, 253, 0.384);
     border-radius: 7px;
     transition: transform 0.3s ease, background 0.3s ease;
   }
   
   .back-button:hover {
-  border: 2px solid white;
+  border: 2px solid rgb(4, 16, 87);
   }
   
   .back-button svg {
