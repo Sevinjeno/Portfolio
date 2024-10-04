@@ -63,6 +63,8 @@ function RippleEffect(e){
   return (
     <>
      <div  className="__Home">
+     <LinkUrl  to="/blog/"><div id="my__blogs">My Blogs</div></LinkUrl>
+
      <Link to="cont" spy={true} smooth={true} offset={500} duration={300 }  ref={elementRef} className="sidenav" onClick={RippleEffect}>
         Contact
        </Link>
@@ -87,7 +89,6 @@ function RippleEffect(e){
                   <Link to="prof"><div id="__aboutme">About Me<span style={{}}><BiCaretDown /> </span> </div>
                    </Link>
 
-                  <LinkUrl to="/blog/"><div id="my__blogs">My Blogs</div></LinkUrl>
 
                   </div>
                 </div>
